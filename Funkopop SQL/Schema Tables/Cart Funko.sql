@@ -1,0 +1,10 @@
+CREATE TABLE `funko`.`Cart` (
+  `Cart_ID` BIGINT NOT NULL AUTO_INCREMENT,
+  `User_ID` BIGINT NOT NULL,
+  `Total` DECIMAL(10,2) NOT NULL DEFAULT 0,
+  `AmtOfPops` INT NOT NULL DEFAULT 0,
+  `Pop_ID` BIGINT NULL,
+  PRIMARY KEY (`Cart_ID`),
+  FOREIGN KEY (`User_ID`) REFERENCES `funko`.`User`(`User_ID`),
+  FOREIGN KEY (`Pop_ID`) REFERENCES `funko`.`FunkoPop`(`Pop_ID`)
+);

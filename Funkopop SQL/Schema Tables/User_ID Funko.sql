@@ -1,0 +1,8 @@
+CREATE TABLE `funko`.`User` (
+  `User_ID` BIGINT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(150) NULL DEFAULT NULL,
+  `Mobile` VARCHAR(15) NULL,
+  `Address` VARCHAR(255) NULL,
+  `Credit_Number` VARCHAR(20) NULL,
+  PRIMARY KEY (`User_ID`)
+);
